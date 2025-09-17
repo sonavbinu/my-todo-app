@@ -5,7 +5,7 @@ import './App.scss';
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div className="container">
       <h1>Start Planning Today🔥</h1>
       <div className="app-main-interface">
         <Calender />

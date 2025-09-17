@@ -41,3 +41,19 @@ body {
   background-color: #f87777 !important;
   color: black !important;
 }
+@media (max-width: 890px) {
+  .calendar-main {
+    width: 220px;
+    .day {
+      font-size: 20px;
+    }
+    .date-today {
+      font-size: 20px;
+    }
+  }
+}
+@media (max-width: 748px) {
+  .calendar {
+    display: none;
+  }
+}

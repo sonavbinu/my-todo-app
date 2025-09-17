@@ -1,4 +1,17 @@
-.app-main-interface {
+.container {
   display: flex;
-  background-color: aqua;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    color: #63605f;
+  }
+  .app-main-interface {
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    @media (max-width: 500px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
