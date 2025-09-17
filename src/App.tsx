@@ -1,11 +1,16 @@
 import React from 'react';
 import Calender from './Components/Calender';
+import TodoList from './Components/TodoList/TodoList';
+import './App.scss';
 
 const App: React.FC = () => {
   return (
     <div>
       <h1>Start Planning Today🔥</h1>
-      <Calender />
+      <div className="app-main-interface">
+        <Calender />
+        <TodoList />
+      </div>
     </div>
   );
 };
