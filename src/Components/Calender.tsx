@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+import './Calender.scss';
 
 const Calender: React.FC = () => {
   const [value, setValue] = useState(new Date());
   return (
-    <div>
-      <p>{value.toLocaleDateString('en-US', { weekday: 'long' })}</p>
-      <p>
+    <div className="calendar-main">
+      <p className="day">
+        {value.toLocaleDateString('en-US', { weekday: 'long' })}
+      </p>
+      <p className="date-today">
         {value.toLocaleDateString('en-US', {
           day: 'numeric',
           month: 'long',
@@ -14,7 +18,7 @@ const Calender: React.FC = () => {
         })}
       </p>
 
-      <Calendar onChange={setValue} value={value} />
+      <Calendar className="calendar" onChange={setValue} value={value} />
     </div>
   );
 };
