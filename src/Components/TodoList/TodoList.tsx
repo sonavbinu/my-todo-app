@@ -59,6 +59,10 @@ const TodoList: React.FC = () => {
               <div className="task-actions">
                 <button className="edit">✏️</button>
                 <button className="delete">🗑️</button>
+                <button>
+                  {' '}
+                  <input type="checkbox" />
+                </button>
               </div>
             </li>
           ))}
