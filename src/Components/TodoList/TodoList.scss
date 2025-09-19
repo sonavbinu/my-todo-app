@@ -41,6 +41,8 @@
   .todo-list ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    padding: 0;
     gap: 10px;
     .task-card {
       background: #f5d4a7;
@@ -49,6 +51,10 @@
       padding: 10px;
       border-radius: 10px;
       border: 1px solid #ddd;
+      min-height: 100px;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      white-space: normal;
     }
   }
 }
