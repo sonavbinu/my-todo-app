@@ -22,5 +22,20 @@
     .input-date {
       min-width: 150px;
     }
+    button {
+      background-color: greenyellow;
+      border: none;
+      border-radius: 6px;
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        background-color: #a8ff4a;
+        transform: translateY(2px);
+      }
+    }
   }
 }
