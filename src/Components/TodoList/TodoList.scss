@@ -40,21 +40,32 @@
   }
   .todo-list ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     list-style: none;
     padding: 0;
-    gap: 10px;
+    gap: 20px;
     .task-card {
       background: #f5d4a7;
+      width: 200px;
       display: flex;
       flex-direction: column;
-      padding: 10px;
+      padding: 20px;
       border-radius: 10px;
       border: 1px solid #ddd;
       min-height: 100px;
       word-wrap: break-word;
       overflow-wrap: break-word;
       white-space: normal;
+      h3 {
+        margin: 0;
+      }
+      p {
+        color: #51453c;
+        margin: 0;
+      }
+      span {
+        color: #51453c;
+      }
     }
   }
 }
