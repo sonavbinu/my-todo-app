@@ -5,6 +5,7 @@ interface Task {
   title: string;
   details: string;
   startDate: string;
+  completed: boolean;
 }
 
 const TodoList: React.FC = () => {
@@ -15,11 +16,14 @@ const TodoList: React.FC = () => {
 
   const addTask = () => {
     if (title.trim() === '' && details.trim() === '') return;
-    const newTask: Task = { title, details, startDate };
+    const newTask: Task = { title, details, startDate, completed: false };
     setTasks([...tasks, newTask]);
     setTitle('');
     setDetails('');
     setStartDate('');
+  };
+  const deleteTask = (index: number) => {
+    setTasks(tasks.filter((_, i) => i !== index));
   };
 
   return (
@@ -58,7 +62,9 @@ const TodoList: React.FC = () => {
 
               <div className="task-actions">
                 <button className="edit">✏️</button>
-                <button className="delete">🗑️</button>
+                <button className="delete" onClick={() => deleteTask(index)}>
+                  🗑️
+                </button>
                 <button>
                   {' '}
                   <input type="checkbox" />
