@@ -33,6 +33,28 @@ const TodoList: React.FC = () => {
     );
   };
 
+  const editTask = (index: number) => {
+    const taskToEdit = tasks[index];
+    const newTitle = prompt('Edit title', taskToEdit.title) || taskToEdit.title;
+    const newDetails =
+      prompt('Edit Details', taskToEdit.details) || taskToEdit.details;
+    const newDate =
+      prompt('Edit Date', taskToEdit.startDate) || taskToEdit.startDate;
+
+    setTasks(
+      tasks.map((task, i) =>
+        i === index
+          ? {
+              ...task,
+              title: newTitle,
+              details: newDetails,
+              startDate: newDate,
+            }
+          : task
+      )
+    );
+  };
+
   return (
     <div className="todo-container">
       <div className="input-main">
@@ -68,7 +90,9 @@ const TodoList: React.FC = () => {
               <span>Start date:{task.startDate}</span>
 
               <div className="task-actions">
-                <button className="edit">✏️</button>
+                <button className="edit" onClick={() => editTask(index)}>
+                  ✏️
+                </button>
                 <button className="delete" onClick={() => deleteTask(index)}>
                   🗑️
                 </button>
