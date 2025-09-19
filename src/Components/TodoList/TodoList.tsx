@@ -83,7 +83,10 @@ const TodoList: React.FC = () => {
       <div className="todo-list">
         <ul>
           {tasks.map((task, index) => (
-            <li key={index} className="task-card">
+            <li
+              key={index}
+              className={`task-card ${task.completed ? 'completed' : ''}`}
+            >
               <h3>{task.title}</h3>
               <br />
               <p> {task.details}</p>
@@ -96,14 +99,14 @@ const TodoList: React.FC = () => {
                 <button className="delete" onClick={() => deleteTask(index)}>
                   🗑️
                 </button>
-                <button>
+                <label className="complete">
                   {' '}
                   <input
                     type="checkbox"
                     checked={task.completed}
                     onChange={() => toggleComplete(index)}
                   />
-                </button>
+                </label>
               </div>
             </li>
           ))}
