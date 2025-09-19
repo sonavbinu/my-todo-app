@@ -18,6 +18,9 @@ body {
     margin-top: -20px;
   }
 }
+.calendar {
+  border: none;
+}
 .react-calendar__navigation button {
   background-color: white !important;
   color: #63605f;
@@ -43,13 +46,22 @@ body {
 }
 @media (max-width: 890px) {
   .calendar-main {
-    width: 220px;
+    width: 320px;
+    gap: 10px;
+    margin-left: 60px;
     .day {
       font-size: 20px;
     }
     .date-today {
       font-size: 20px;
     }
+  }
+  .calendar {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    border: none;
   }
 }
 @media (max-width: 748px) {
