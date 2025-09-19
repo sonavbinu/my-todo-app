@@ -57,7 +57,8 @@ const TodoList: React.FC = () => {
               <span>Start date:{task.startDate}</span>
 
               <div className="task-actions">
-                <button>✏️</button>
+                <button className="edit">✏️</button>
+                <button className="delete">🗑️</button>
               </div>
             </li>
           ))}
