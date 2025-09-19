@@ -25,6 +25,13 @@ const TodoList: React.FC = () => {
   const deleteTask = (index: number) => {
     setTasks(tasks.filter((_, i) => i !== index));
   };
+  const toggleComplete = (index: number) => {
+    setTasks(
+      tasks.map((task, i) =>
+        i === index ? { ...task, completed: !task.completed } : task
+      )
+    );
+  };
 
   return (
     <div className="todo-container">
@@ -67,7 +74,11 @@ const TodoList: React.FC = () => {
                 </button>
                 <button>
                   {' '}
-                  <input type="checkbox" />
+                  <input
+                    type="checkbox"
+                    checked={task.completed}
+                    onChange={() => toggleComplete(index)}
+                  />
                 </button>
               </div>
             </li>
