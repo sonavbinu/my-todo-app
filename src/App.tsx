@@ -25,7 +25,7 @@ const App: React.FC = () => {
 
   return (
     <div className="container">
-      <h1>Start Planning Today🔥</h1>
+      <h1>Start Planning Today🔥 </h1>
       <p>{quote}</p>
       <div className="app-main-interface">
         <TodoList />

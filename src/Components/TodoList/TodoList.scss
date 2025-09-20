@@ -49,7 +49,8 @@ body {
   }
   .todo-list ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 40px;
     list-style: none;
     padding: 0;
     gap: 50px;
@@ -75,7 +76,6 @@ body {
       }
       h3 {
         margin: 0;
-        font-size: 26px;
       }
       p {
         color: #51453c;
@@ -117,20 +117,23 @@ body {
 
     input,
     button {
-      width: 90%;
+      width: 100%;
       margin-left: 0;
     }
   }
   .todo-list ul {
+    display: grid;
     grid-template-columns: 1fr;
-    margin-right: 200px;
-    font-size: 10px;
+    font-size: 14px;
+    .task-card h3 {
+      font-size: 14px;
+    }
   }
 }
 
 @media (max-width: 900px) {
   .todo-list ul {
-    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
 }
 @media (min-width: 901px) {
